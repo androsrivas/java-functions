@@ -10,3 +10,26 @@
 //Ejecuta el método greetingCoder 
 
 //¿Sabes donde definir el método y en dónde lo has de ejecutar? Si no lo sabes vuelve al archivo de Resources.md
+
+import java.util.Scanner;
+
+public class Welcome {
+    public static void main (String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        greeting();
+
+        System.out.println("¿Cómo te llamas?");
+        String name = input.nextLine();
+        greetingCoder(name);
+    }
+
+    public static void greeting() {
+        System.out.println("¡Hola Coders!");
+    }
+
+    public static void greetingCoder (String name) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("¡Hola " + name + "!");
+    }
+}
