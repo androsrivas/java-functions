@@ -1,16 +1,20 @@
 public class DocComments {
-
-    //Para documentar un método se toman en cuenta, el nombre de la función, los parámetros con su tipo de dato, lo que devuelve con su tipo de dato y lo que hace la función. Mira estos ejemplos y resuelve el ejercicio final. 
+    //Para documentar un metodo se toman en cuenta,
+    //el nombre de la función, los parámetros con su tipo de dato,
+    //lo que devuelve con su tipo de dato y lo que hace la función.
+    //Mira estos ejemplos y resuelve el ejercicio final.
     
-    //Si escribes primero la función y luego sobre ella escribes /** */ te saldrá automáticamente la plantilla de documentación.
+    //Si escribes primero la función y luego sobre ella escribes /** */
+    //te saldrá automáticamente la plantilla de documentación.
     
     public static void main(String[] args) {
         greeting();
         greetingCoder("Cris", 165, 58);
-        double bmi = calculateBodyMassIndex(1.65, 58);
-        System.out.println(bmi);
+        double bmiCris = calculateBodyMassIndex(1.65, 58);
+        System.out.println(bmiCris);
+        resultBMI(bmiCris);
 
-        //Ejecuta el nuevo método 
+        //Ejecuta el nuevo metodo
     }
 
     /**
@@ -20,7 +24,7 @@ public class DocComments {
      * 1. prints "Hola Coder"
      * 
      */
-    public static void greeting(){
+    public static void greeting() {
         System.out.println("Hola Coder");
     }
 
@@ -35,7 +39,7 @@ public class DocComments {
      * 1. print the name the height and the weight as part of a text
      */
 
-    public static void greetingCoder(String name, double height, double weight){
+    public static void greetingCoder(String name, double height, double weight) {
         System.out.println("Hola mi nombre es " + name + " mido " + height + " cm y peso " + weight + " kg" );
     }
 
@@ -57,7 +61,7 @@ public class DocComments {
 
     //Escribe una función que con el índice de masa corporal devuelva un String con los resultados y documéntala:
     
-    /* Clasificación índice de masa corportal rango - kg/m2
+    /* Clasificación índice de masa corporal rango - kg/m2
     Delgadez severa	< 16
     Delgadez moderada	16 - 17
     Delgadez leve	17 - 18.5
@@ -66,6 +70,34 @@ public class DocComments {
     Obeso Clase I	30 - 35
     Obeso Clase II	35 - 40
     Obeso Clase III	> 40 */
+
+    /**
+     * Function name: resultBMI
+     *
+     * @param bmi (double)
+     *
+     * Inside the function:
+     * 1. Print type of BMI
+     */
+    public static void resultBMI (double bmi) {
+        if (bmi <= 16) {
+            System.out.println("Delgadez severa");
+        } else if (bmi <= 17) {
+            System.out.println("Delgadez moderada");
+        } else if (bmi <= 18.5) {
+            System.out.println("Delgadez leve");
+        } else if (bmi <= 25) {
+            System.out.println("Normal");
+        } else if (bmi <= 30) {
+            System.out.println("Sobrepeso");
+        } else if (bmi <= 35) {
+            System.out.println("Obeso clase I");
+        } else if (bmi <= 40) {
+            System.out.println("Obeso clase II");
+        } else if (bmi > 40) {
+            System.out.println("Obeso clase III");
+        }
+    }
 
 
 
